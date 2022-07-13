@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Color Scheme Generator</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <form>
+                    <input type="color" id="color-picker" value="#F55A5A">
+                    <select id="scheme-options">
+                        <option value="monochrome">Monochrome</option>
+                        <option value="monochrome-dark">Monochrome-dark</option>
+                        <option value="monochrome-light">Monochrome-light</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic-complement</option>
+                        <option value="triad">Triad</option>
+                    </select>
+                    <button>Get color scheme</button>
+                </form>
+            </header>
+            <div class="mobile">
+                <main>
+                    <div id="color-1"></div>
+                    <div id="color-2" class="column"></div>
+                    <div id="color-3" class="column"></div>
+                    <div id="color-4" class="column"></div>
+                    <div id="color-5" class="column"></div>
+                </main>
+                <footer>
+                    <p id="hex-1" onclick="copyToClipboard(0)">#F55A5A</p> 
+                    <p class="hex" onclick="copyToClipboard(1)">#055050</p>
+                    <p class="hex" onclick="copyToClipboard(2)">#000050</p>
+                    <p class="hex" onclick="copyToClipboard(3)">#000000</p>
+                    <p class="hex" onclick="copyToClipboard(4)">#A626D3</p>
+                </footer>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
